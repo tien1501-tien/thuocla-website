@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <title>SHOP TIENTOBACCO</title>
+    <style>
+      :root {
+        --main-color: black;
+        --bg-color: white;
+        --card-bg: grey;
+        --text-color: #f2f2f2;
+        --highlight: #ffb84d;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: "Segoe UI", sans-serif;
+        background-color: var(--bg-color);
+        color: var(--text-color);
+        line-height: 1.6;
+      }
+
+      header {
+        background-color: rgb(41, 40, 39);
+        padding: 20px;
+        text-align: center;
+        color: white;
+      }
+
+      header h1 {
+        margin-bottom: 5px;
+        font-size: 32px;
+        letter-spacing: 1px;
+      }
+
+      nav {
+        display: flex;
+        justify-content: center;
+        background-color: #333;
+      }
+
+      nav button {
+        background: none;
+        color: white;
+        border: none;
+        padding: 15px 30px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background 0.3s;
+      }
+
+      nav button:hover,
+      nav button.active {
+        background-color: var(--main-color);
+        color: grey;
+      }
+
+      .product-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 30px 20px;
+        gap: 25px;
+      }
+
+      .product {
+        background-color: var(--card-bg);
+        border-radius: 15px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        width: 220px;
+        text-align: center;
+        padding: 20px;
+        transition: transform 0.3s ease;
+      }
+
+      .product:hover {
+        transform: translateY(-5px);
+      }
+
+      .product img {
+        width: 100%;
+        border-radius: 10px;
+        margin-bottom: 10px;
+      }
+
+      .product h2 {
+        font-size: 18px;
+        color: var(--highlight);
+        margin: 10px 0;
+      }
+
+      .product p {
+        font-size: 15px;
+        margin-bottom: 10px;
+      }
+
+      .add {
+        padding: 8px 14px;
+        background-color: var(--main-color);
+        color: white;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-weight: bold;
+        transition: background 0.2s;
+      }
+
+      .add:hover {
+        background-color: #ffa733;
+      }
+
+      .hidden {
+        display: none;
+      }
+
+      footer {
+        background-color: #222;
+        padding: 20px;
+        text-align: center;
+        font-size: 14px;
+        color: #aaa;
+      }
+
+      @media (max-width: 600px) {
+        .product {
+          width: 90%;
+        }
+
+        nav button {
+          padding: 12px 15px;
+          font-size: 14px;
+        }
+      }
+    </style>
+  <header>
+    <div class="header-container">
+      <div class="logo-container">
+        <img src="img/anhthuocla.jpg.png" alt="logo" width="10%" />
+      </div>
+      <div class="header-left">
+        <h1>Shop TIENTOBACCO</h1>
+        <p>Thuốc lá & phụ kiện chính hãng</p>
+        <div class="facebook-link">
+          <a href="https://www.facebook.com/tien.trinhhoang.9022" target="_blank">
+            📘 Facebook : Trịnh Hoàng Tiến 
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+  
+  
+  
+    <nav>
+      <button class="tab-btn active" onclick="showTab('thuocla')">
+        Bán thuốc lá
+      </button>
+      <button class="tab-btn" onclick="showTab('batlua')">Bán bật lửa</button>
+    </nav>
+
+    <!-- Thuốc lá -->
+    <div id="thuocla" class="product-container">
+      <div class="product">
+        <img
+          src="https://thuoclahanoi.com/wp-content/uploads/2021/06/Thuoc-chapman-Cherry-1-800x800.jpg"
+          alt="Chapman"
+        />
+        <h2> Thuốc lá Chapman</h2>
+        <p>Giá: 45.000đ</p>
+        <button class="add">Thêm vào giỏ</button>
+      </div>
+
+      <div class="product">
+        <img
+          src="https://file.hstatic.net/200000136259/file/camel-activate-chilled-honeydew-thuoc-la-chinh-hang-1_71b587d3965c42b29f87caa97d60b3cf.jpeg"
+          alt="Craven"
+        />
+        <h2>Thuốc lá Craven</h2>
+        <p>Giá: 40.000đ</p>
+        <button class="add">Thêm vào giỏ</button>
+      </div>
+
+      <div class="product">
+        <img
+          src="https://thuoclahanoi.com/wp-content/uploads/2021/06/Esse-change-2.jpg"
+          alt="Esse"
+        />
+        <h2>Thuốc lá Esse</h2>
+        <p>Giá: 35.000đ</p>
+        <button class="add">Thêm vào giỏ</button>
+      </div>
+
+      <div class="product">
+        <img
+          src="https://cigar77.com/wp-content/uploads/2023/05/thuoc-la-raison-orange-cafe.jpg"
+          alt="Raison"
+        />
+        <h2>Thuốc lá Raison</h2>
+        <p>Giá: 40.000đ</p>
+        <button class="add">Thêm vào giỏ</button>
+      </div>
+
+      <div class="product">
+        <img
+          src="https://thuoclahanoi.com/wp-content/uploads/2021/06/Zouk-chocolate-1.jpg"
+          alt="Zouk"
+        />
+        <h2>Thuốc lá Zouk</h2>
+        <p>Giá: 30.000đ / gói</p>
+        <button class="add">Thêm vào giỏ</button>
+      </div>
+
+      <div class="product">
+        <img
+          src="https://thuocla555.com/wp-content/uploads/2022/12/thuoc-la-Forte-2.jpg"
+          alt="Forte"
+        />
+        <h2>Thuốc lá Forte</h2>
+        <p>Giá: 38.000đ / gói</p>
+        <button class="add">Thêm vào giỏ</button>
+      </div>
+
+      <div class="product">
+        <img
+          src="https://thuocla555.com/wp-content/uploads/2023/12/thuoc-la-Canyon-Vanilla.jpg"
+          alt="Caryon"
+        />
+        <h2>Thuốc lá Caryon</h2>
+        <p>Giá: 27.000đ / gói</p>
+        <button class="add">Thêm vào giỏ</button>
+      </div>
+
+      <div class="product">
+        <img
+          src="https://cigarsaigon.vn/uploads/shops/2017_11/thuoc-la-thom-marula-capsule1.jpg"
+          alt="Marula"
+        />
+        <h2>Thuốc lá Marula</h2>
+        <p>Giá: 40.000đ / gói</p>
+        <button class="add">Thêm vào giỏ</button>
+      </div>
+    </div>
+    </div>
+
+    <!-- Bật lửa -->
+    <div id="batlua" class="product-container hidden">
+      <div class="product">
+        <img
+          src="https://zippo.net.vn/wp-content/uploads/bat-lua-zippo-classic-zp317-chinh-hang.jpg"
+          alt="Zippo"
+        />
+        <h2>Zippo Mỹ</h2>
+        <p>Giá: 3.500.000đ</p>
+        <button class="add">Thêm vào giỏ</button>
+      </div>
+
+      <div class="product">
+        <img
+          src="https://batluare.com/assets/upload/product/03-03-2023/bat-lua-2-che-do-bat-lua-dien-plasma-va-lua-kho-ht-1677814942/goc/bat-lua-dien-plasma-gas-kho-10-.jpg"
+          alt="Bật lửa điện"
+        />
+        <h2>Bật lửa điện</h2>
+        <p>Giá: 900.000đ</p>
+        <button class="add">Thêm vào giỏ</button>
+      </div>
+
+      <div class="product">
+        <img
+          src="https://salt.tikicdn.com/cache/280x280/ts/product/f0/18/77/56ea82799b6f9d4bd351d53d6c036832.jpg"
+          alt="Xăng đá"
+        />
+        <h2>Bật lửa xăng đá</h2>
+        <p>Giá: 900.000đ</p>
+        <button class="add">Thêm vào giỏ</button>
+      </div>
+    </div>
+
+    <footer>
+      © 2025 Shop TIENTOBACCO 
+      <div class="facebook-link">
+        <a href="https://www.facebook.com/tien.trinhhoang.9022" target="_blank">
+          📘 Facebook : Trịnh Hoàng Tiến 
+        </a>
+      </div>
+
+    </footer>
+
+    <script>
+      function showTab(tabId) {
+        document.getElementById("thuocla").classList.add("hidden");
+        document.getElementById("batlua").classList.add("hidden");
+
+        document.getElementById(tabId).classList.remove("hidden");
+
+        const buttons = document.querySelectorAll(".tab-btn");
+        buttons.forEach((btn) => btn.classList.remove("active"));
+        event.target.classList.add("active");
+      }
+    </script>
+    <div class="cart-popup" id="cartPopup">
+        <h3>Thêm vào giỏ hàng</h3>
+        <div>
+          <label>Số lượng:</label>
+          <input type="number" id="quantityInput" min="1" value="1" />
+        </div>
+        <div style="margin-top: 10px;">
+          <strong>Tổng tiền:</strong> <span id="totalPrice">0</span>đ
+        </div>
+        <button class="close-btn" onclick="closePopup()">Đóng</button>
+      </div>      
+  </body>
+</html>
